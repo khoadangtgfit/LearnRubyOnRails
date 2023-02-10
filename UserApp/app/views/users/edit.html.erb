@@ -1,0 +1,16 @@
+<div class="container sm">
+<h1>Edit User</h1>
+ <% if @user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@user.errors.count, "error") %></h2>
+      <ul>
+        <% @user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= render 'form', user: @user, url: user_path(@user), method: :put %>
+
+</div>

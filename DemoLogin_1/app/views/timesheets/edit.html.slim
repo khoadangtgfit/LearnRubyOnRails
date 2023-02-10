@@ -1,0 +1,25 @@
+.container-sm
+  h1
+    | Edit Time Sheet For User
+    =@timesheet.user.username
+  - if @timesheet.errors.any?
+    div[style="color: red"]
+      h2
+        = pluralize(@timesheet.errors.count, "error")
+    ul
+      - @timesheet.errors.each do |error|
+        li
+          = error.full_message
+= form_with model: @timesheet,url: timesheet_path(@timesheet), local: true do |form|
+  .form-group
+    = form.label :check_in, style: "display: block"
+    = form.time_field :check_in, value: @timesheet.check_in, format: "%H:%M",class:"form-control"
+  .form-group
+    = form.label :check_out, style: "display: block"
+    = form.time_field :check_out, value: format_time_24h(@timesheet.check_out), format: "%H:%M",class:'form-control'
+  .form-group
+    = form.label :day, style: "display: block"
+    = form.date_field :day, value: @timesheet.day, class:'form-control'
+  .actions
+    = form.submit "Save",class: 'btn btn-outline-primary'
+    =link_to "Back", timesheets_path,class:'btn btn-outline-success'

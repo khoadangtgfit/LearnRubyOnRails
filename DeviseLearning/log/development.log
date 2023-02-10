@@ -1,0 +1,429 @@
+Started GET "/" for 127.0.0.1 at 2022-12-18 20:46:46 +0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.9ms | Allocations: 576)
+Completed 200 OK in 24ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 4374)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2022-12-18 20:50:26 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20221218134944_devise_create_users.rb
+
+
+):
+  
+activerecord (6.1.7) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.7) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.7) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.7) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.7) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.4) lib/rack/proxy.rb:78:in `call'
+railties (6.1.7) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2022-12-18 20:50:28 +0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20221218134944)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221218134944"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-12-18 13:50:28.943667"], ["updated_at", "2022-12-18 13:50:28.943667"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/session/new" for 127.0.0.1 at 2022-12-18 20:50:28 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/session/new"):
+  
+Started GET "/sessions/new" for 127.0.0.1 at 2022-12-18 20:50:33 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/sessions/new"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-18 20:50:47 +0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 3.2ms | Allocations: 702)
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 37.1ms | Allocations: 7720)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-18 20:50:52 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 167)
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1343)
+[Webpacker] Compiling...
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/johnny/Documents/Rails/DeviseLearning/public/packs
+[Webpacker] Hash: 804a8059a304061a3e74
+Version: webpack 4.46.0
+Time: 1812ms
+Built at: 12/18/2022 8:51:09 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-271cf8931bb708d2d8bb.js    121 KiB  application  [emitted] [immutable]  application
+js/application-271cf8931bb708d2d8bb.js.map    133 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-271cf8931bb708d2d8bb.js js/application-271cf8931bb708d2d8bb.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 493 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 17383.1ms | Allocations: 127359)
+Completed 200 OK in 17384ms (Views: 17383.7ms | ActiveRecord: 0.0ms | Allocations: 128076)
+
+
+[Webpacker] Compiled all packs in /home/johnny/Documents/Rails/DeviseLearning/public/packs
+[Webpacker] Hash: 804a8059a304061a3e74
+Version: webpack 4.46.0
+Time: 1962ms
+Built at: 12/18/2022 8:51:09 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-271cf8931bb708d2d8bb.js    121 KiB  application  [emitted] [immutable]  application
+js/application-271cf8931bb708d2d8bb.js.map    133 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-271cf8931bb708d2d8bb.js js/application-271cf8931bb708d2d8bb.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 493 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 21845.7ms | Allocations: 174130)
+Completed 200 OK in 21865ms (Views: 21849.1ms | ActiveRecord: 0.9ms | Allocations: 183286)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-18 20:53:26 +0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 731)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 5255)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 19194)
+Completed 200 OK in 52ms (Views: 36.4ms | ActiveRecord: 0.4ms | Allocations: 28145)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-18 20:54:10 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 567)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2348)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 8942)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 10894)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-12-18 20:58:00 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 241)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 165)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2323)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 8708)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 10240)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-12-18 20:58:17 +0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"khoa1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "khoa1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "khoa1@gmail.com"], ["encrypted_password", "$2a$12$TU0avs/2t1LcxZ8Ke47Wz.zq9qeAADIMQnCfZsc5XlDftQYKdI2Pi"], ["created_at", "2022-12-18 13:58:17.698722"], ["updated_at", "2022-12-18 13:58:17.698722"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 343ms (ActiveRecord: 7.8ms | Allocations: 12600)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-18 20:58:17 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.6ms | Allocations: 268)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 1336)
+
+
+Started GET "/" for ::1 at 2022-12-18 20:58:21 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 18.6ms | Allocations: 629)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 1625)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-18 20:58:25 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 567)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 9051)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.0ms | Allocations: 10907)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-12-18 20:58:36 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"khoa1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "khoa1@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 254ms (ActiveRecord: 0.3ms | Allocations: 6017)
+
+
+Started GET "/" for ::1 at 2022-12-18 20:58:36 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 52)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 468)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-19 12:42:35 +0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.5ms | Allocations: 470)
+Completed 200 OK in 33ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 3326)
+
+
+Started GET "/" for ::1 at 2022-12-19 12:42:38 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.5ms | Allocations: 265)
+Completed 200 OK in 17ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 2714)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-19 12:42:46 +0700
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/johnny/Documents/Rails/DeviseLearning/app/controllers/application_controller.rb:2)
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 32ms (ActiveRecord: 1.3ms | Allocations: 8497)
+
+
+Started GET "/" for ::1 at 2022-12-19 12:42:46 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 52)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 494)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-19 12:42:55 +0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1566)
+
+
+Started GET "/" for ::1 at 2022-12-19 12:42:56 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 46)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 402)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-19 12:43:31 +0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 1524)
+
+
+Started GET "/" for ::1 at 2022-12-19 12:43:31 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 46)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 402)
+
+
+Started GET "/" for ::1 at 2022-12-19 12:43:32 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 46)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 405)
+
+
+Started GET "/sign_in" for ::1 at 2022-12-19 12:43:52 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/sign_in"):
+  
+Started GET "/users/sign_in" for ::1 at 2022-12-19 12:44:10 +0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 1757)
+
+
+Started GET "/" for ::1 at 2022-12-19 12:44:10 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 48)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 437)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-19 12:45:17 +0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/johnny/Documents/Rails/DeviseLearning/app/controllers/application_controller.rb:2)
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 23ms (ActiveRecord: 1.0ms | Allocations: 8780)
+
+
+Started GET "/" for ::1 at 2022-12-19 12:45:17 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.5ms | Allocations: 459)
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 3130)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-19 12:46:12 +0700
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/johnny/Documents/Rails/DeviseLearning/app/controllers/application_controller.rb:2)
+Processing by Devise::SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 1.0ms | Allocations: 7418)
+
+
+Started GET "/" for ::1 at 2022-12-19 12:46:12 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.0ms | Allocations: 265)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 1118)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-19 12:49:02 +0700
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/johnny/Documents/Rails/DeviseLearning/app/controllers/application_controller.rb:2)
+Processing by Devise::SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 1.2ms | Allocations: 7376)
+
+
+Started GET "/" for ::1 at 2022-12-19 12:49:02 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 52)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 459)
+
+
+Started GET "/" for ::1 at 2022-12-19 12:49:02 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 46)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 407)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-19 12:49:45 +0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 1510)
+
+
+Started GET "/" for ::1 at 2022-12-19 12:49:45 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 45)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 400)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-19 12:50:02 +0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1526)
+
+
+Started GET "/" for ::1 at 2022-12-19 12:50:02 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 46)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 402)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-19 12:50:22 +0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1509)
+
+
+Started GET "/" for ::1 at 2022-12-19 12:50:22 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 45)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 399)
+
+

@@ -1,0 +1,11 @@
+h1#redtitle
+  |  Edit Password
+= form_with model: Current.user, url: edit_password_path do|form|
+  .mb-3
+    =form.label :password
+    =form.password_field :password, class:"form-control",placeholder:"password"
+  .mb-3
+    =form.label :password_confirmation
+    =form.password_field :password_confirmation, class:"form-control",placeholder:"password"
+  .mb-3
+    =form.submit "Update Password", class:"btn btn-primary"

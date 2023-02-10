@@ -1,0 +1,46 @@
+.btn {
+  border-radius: 10px;
+  height: 50px;
+}
+
+.btn-primary {
+  background-color: $primary-purple;
+  border-color: $primary-purple;
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(105 108 255 / 40%);
+  color: $white;
+}
+
+.btn-primary:hover {
+  color: $white;
+  transform: translateY(-1px);
+}
+.btn-warning:hover {
+  transform: translateY(-1px);
+}
+.table {
+  font-size: 17px;
+  align-items: center;
+}
+
+.badge {
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+.bg-label-success {
+  background-color: #e8fadf !important;
+  color: #71dd37 !important;
+}
+
+.table-condensed {
+  font-size: 15px;
+}
+
+.table-responsive {
+  height: 800px;
+}
+
+.my-custom-class {
+  background-color: $teal;
+  color: $white;
+}

@@ -1,0 +1,32 @@
+<% form_for @contact, :url => {:action => "#"}, method: 'post' do |f| %>
+<div class="contact_from">
+  <!-- Message Input Area Start -->
+  <div class="contact_input_area">
+    <div class="row">
+      <!-- Single Input Area Start -->
+      <div class="col-md-12">
+        <div class="form-group">
+          <%= f.text_field :name, required: true, class: 'form-control', placeholder: "Your Name" %>
+        </div>
+      </div>
+      <!-- Single Input Area Start -->
+      <div class="col-md-12">
+        <div class="form-group">
+          <%= f.text_field :email, required: true, class: 'form-control', placeholder: "Your E-mail" %>
+        </div>
+      </div>
+      <!-- Single Input Area Start -->
+      <div class="col-12">
+        <div class="form-group">
+          <%= f.text_area :message, required: true, :size => "30x4", class: 'form-control', placeholder: 'Your Message *' %>
+        </div>
+      </div>
+      <!-- Single Input Area Start -->
+      <div class="col-12">
+        <button type="submit" class="btn submit-btn">Send Now</button>
+      </div>
+    </div>
+  </div>
+  <!-- Message Input Area End -->
+</div>
+<% end %>

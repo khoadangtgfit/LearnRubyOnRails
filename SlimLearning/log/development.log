@@ -1,0 +1,243 @@
+Started GET "/" for 127.0.0.1 at 2022-12-19 13:12:54 +0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.7ms | Allocations: 576)
+Completed 200 OK in 32ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 4524)
+
+
+Started GET "/page" for ::1 at 2022-12-19 13:13:08 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/page"):
+  
+Started GET "/pages" for ::1 at 2022-12-19 13:13:11 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/pages"):
+  
+Started GET "/page" for ::1 at 2022-12-19 13:13:36 +0700
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.slim within layouts/application
+  Rendered page/index.slim within layouts/application (Duration: 17.3ms | Allocations: 14356)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 14530)
+Completed 500 Internal Server Error in 20ms (Allocations: 15873)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `dkso' for #<ActionView::Base:0x00000000009060>):
+    1: h1.title
+    2:   | Admin
+    3:   =dkso
+  
+app/views/page/index.slim:3
+Started GET "/page" for ::1 at 2022-12-19 13:18:39 +0700
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.slim within layouts/application
+  Rendered page/index.slim within layouts/application (Duration: 7.2ms | Allocations: 1887)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/johnny/Documents/Rails/SlimLearning/public/packs
+[Webpacker] Hash: 804a8059a304061a3e74
+Version: webpack 4.46.0
+Time: 1945ms
+Built at: 12/19/2022 1:18:43 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-271cf8931bb708d2d8bb.js    121 KiB  application  [emitted] [immutable]  application
+js/application-271cf8931bb708d2d8bb.js.map    133 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-271cf8931bb708d2d8bb.js js/application-271cf8931bb708d2d8bb.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 493 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 3889.3ms | Allocations: 16052)
+Completed 200 OK in 3898ms (Views: 3895.7ms | Allocations: 17199)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20221219062628)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221219062628"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-12-19 06:27:06.279908"], ["updated_at", "2022-12-19 06:27:06.279908"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "djso"], ["created_at", "2022-12-19 06:27:41.108611"], ["updated_at", "2022-12-19 06:27:41.108611"]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "djso"], ["created_at", "2022-12-19 06:27:42.493819"], ["updated_at", "2022-12-19 06:27:42.493819"]]
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "djso"], ["created_at", "2022-12-19 06:27:43.463506"], ["updated_at", "2022-12-19 06:27:43.463506"]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "djso"], ["created_at", "2022-12-19 06:27:44.271141"], ["updated_at", "2022-12-19 06:27:44.271141"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "djso"], ["created_at", "2022-12-19 06:27:44.931370"], ["updated_at", "2022-12-19 06:27:44.931370"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "djso"], ["created_at", "2022-12-19 06:27:45.570590"], ["updated_at", "2022-12-19 06:27:45.570590"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "djso"], ["created_at", "2022-12-19 06:27:46.221440"], ["updated_at", "2022-12-19 06:27:46.221440"]]
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "djso"], ["created_at", "2022-12-19 06:27:46.860509"], ["updated_at", "2022-12-19 06:27:46.860509"]]
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/page" for ::1 at 2022-12-19 13:31:05 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.slim within layouts/application
+  Rendered page/index.slim within layouts/application (Duration: 9.5ms | Allocations: 8539)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 8621)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 9928)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users' for #<ActionView::Base:0x0000000000a7a8>):
+     7:     th
+     8:       | username
+     9: tbody
+    10:   -users.each do |user|
+    11:     -unless user.admin?
+    12:       tr
+    13:         td
+  
+app/views/page/index.slim:10
+Started GET "/page" for ::1 at 2022-12-19 13:32:36 +0700
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.slim within layouts/application
+  Rendered page/index.slim within layouts/application (Duration: 5.8ms | Allocations: 4456)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4538)
+Completed 500 Internal Server Error in 9ms (Allocations: 5244)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users' for #<ActionView::Base:0x0000000000bab8>):
+     7:     th
+     8:       | username
+     9: tbody
+    10:   -users.each do |user|
+    11:     -unless user.admin?
+    12:       tr
+    13:         td
+  
+app/views/page/index.slim:10
+Started GET "/page" for ::1 at 2022-12-19 13:32:38 +0700
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.slim within layouts/application
+  Rendered page/index.slim within layouts/application (Duration: 7.6ms | Allocations: 4447)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4523)
+Completed 500 Internal Server Error in 9ms (Allocations: 4930)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users' for #<ActionView::Base:0x0000000000bd88>):
+     7:     th
+     8:       | username
+     9: tbody
+    10:   -users.each do |user|
+    11:     -unless user.admin?
+    12:       tr
+    13:         td
+  
+app/views/page/index.slim:10
+Started GET "/page" for ::1 at 2022-12-19 13:32:43 +0700
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.slim within layouts/application
+  Rendered page/index.slim within layouts/application (Duration: 4.6ms | Allocations: 4494)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 4576)
+Completed 500 Internal Server Error in 8ms (Allocations: 5282)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users' for #<ActionView::Base:0x0000000000cf58>):
+     7:     th
+     8:       | username
+     9: tbody
+    10:   -users.each do |user|
+    11:     -unless user.admin?
+    12:       tr
+    13:         td
+  
+app/views/page/index.slim:10
+Started GET "/page" for ::1 at 2022-12-19 13:33:19 +0700
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.slim within layouts/application
+  Rendered page/index.slim within layouts/application (Duration: 12.7ms | Allocations: 8439)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 8521)
+Completed 500 Internal Server Error in 18ms (Allocations: 9687)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000000d2f0>
+Did you mean?  super):
+     7:     th
+     8:       | username
+     9: tbody
+    10:   -user.each do |user|
+    11:       tr
+    12:         td
+    13:           = user.id
+  
+app/views/page/index.slim:10
+Started GET "/page" for ::1 at 2022-12-19 13:33:33 +0700
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.slim within layouts/application
+  Rendered page/index.slim within layouts/application (Duration: 5.5ms | Allocations: 4485)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4567)
+Completed 500 Internal Server Error in 8ms (Allocations: 5273)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000000e5b0>
+Did you mean?  super):
+     7:     th
+     8:       | username
+     9: tbody
+    10:   -user.each do |user|
+    11:       tr
+    12:         td
+    13:           = user.id
+  
+app/views/page/index.slim:10
+Started GET "/page" for ::1 at 2022-12-19 13:33:43 +0700
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.slim within layouts/application
+  Rendered page/index.slim within layouts/application (Duration: 5.3ms | Allocations: 4523)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 4605)
+Completed 500 Internal Server Error in 7ms (Allocations: 5311)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000000f780>
+Did you mean?  super):
+     7:     th
+     8:       | username
+     9: tbody
+    10:   -user.each do |user|
+    11:       tr
+    12:         td
+    13:           = user.id
+  
+app/views/page/index.slim:10

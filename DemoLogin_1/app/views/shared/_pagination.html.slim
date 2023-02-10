@@ -1,0 +1,33 @@
+- if pagy.pages > 1
+  .d-flex.justify-content-between.align-items-center
+    p.pagy-info.mb-0
+      ' Showing
+      span.fw-bold #{pagy.from}
+      '&nbsp; to
+      span.fw-bold #{pagy.to}
+      '&nbsp; #{object_name}
+      '&nbsp;of
+      span.fw-bold #{pagy.count}
+      '&nbsp; #{object_name}
+    .pagy-pagination
+      - link = pagy_link_proc(pagy, link_extra: 'class="page-link"')
+      nav.pagy-bootstrap-nav role="navigation" aria-label="pager"
+        ul.pagination
+          - if pagy.prev
+            li.page-item.prev.btn-action == link.call(pagy.prev, 'Back', 'aria-label="previous"')
+          - else
+            li.page-item.prev.disabled.btn-action
+              a.page-link href="#" == 'Back'
+          - pagy.series.each do |item|                 # series example: [1, :gap, 7, 8, "9", 10, 11, :gap, 36]
+            - if item.is_a?(Integer)                   # page link
+              li.page-item == link.call(item)
+            - elsif item.is_a?(String)                 # current page
+              li.page-item.active == link.call(item)
+            - elsif item == :gap                       # page gap
+              li.page-item.disabled.gap
+                a.page-link href="#" == pagy_t('pagy.nav.gap')
+          - if pagy.next
+            li.page-item.next.btn-action == link.call(pagy.next, 'Next', 'aria-label="next"')
+          - else
+            li.page-item.next.disabled.btn-action
+              a.page-link href="#" == 'Next'

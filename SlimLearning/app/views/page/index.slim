@@ -1,0 +1,15 @@
+h1.title
+  | Admindsds
+thead
+  tr
+    th
+      | userid
+    th
+      | username
+tbody
+  -users.each do |user|
+      tr
+        td
+          = user.id
+        td
+          =user.name

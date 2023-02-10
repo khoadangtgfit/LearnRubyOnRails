@@ -1,0 +1,53 @@
+.container-sm
+  - if !flash[:notice].blank?
+    .alert.alert-info
+      = flash[:notice]
+  br
+  = link_to "New timesheet", new_timesheet_path, class: "btn btn-outline-success"
+  br
+  br
+  table.table.table-bordered.table-striped
+    thead
+      tr
+        th
+          | User id
+        th
+          | Check in
+        th
+          | Check out
+        th
+          | Day
+        th
+    tbody
+      - @timesheets.each do |timesheet|
+        tr
+          td
+            = timesheet.user_id
+          td
+            = format_time_24h(timesheet.check_in)
+          td
+            = format_time_24h(timesheet.check_out)
+          td
+            = format_date_normal(timesheet.day)
+          td
+            .btn-group
+              button.btn.btn-outline-danger type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                | Delete
+              = link_to "Update", edit_timesheet_path(timesheet), class: "btn btn-outline-primary"
+
+
+#exampleModal.modal.fade[tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"]
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title
+          | Modal title
+        button.btn-close[type="button" data-bs-dismiss="modal" aria-label="Close"]
+      .modal-body
+        |  ...
+      .modal-footer
+        button.btn.btn-secondary[type="button" data-bs-dismiss="modal"]
+          | Close
+        button.btn.btn-primary[type="button"]
+          | Save changes
+        / = link_to 'Save Change', timesheet_path(@timesheets.first), method: :delete, class: 'btn btn-primary'

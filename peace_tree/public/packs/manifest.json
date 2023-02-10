@@ -1,0 +1,50 @@
+{
+  "admin.js": "/packs/js/admin-f8c2fa5a28256433c0db.js",
+  "admin.js.map": "/packs/js/admin-f8c2fa5a28256433c0db.js.map",
+  "application.js": "/packs/js/application-816a9f81982b597b203f.js",
+  "application.js.map": "/packs/js/application-816a9f81982b597b203f.js.map",
+  "entrypoints": {
+    "admin": {
+      "js": [
+        "/packs/js/admin-f8c2fa5a28256433c0db.js"
+      ],
+      "js.map": [
+        "/packs/js/admin-f8c2fa5a28256433c0db.js.map"
+      ]
+    },
+    "application": {
+      "js": [
+        "/packs/js/application-816a9f81982b597b203f.js"
+      ],
+      "js.map": [
+        "/packs/js/application-816a9f81982b597b203f.js.map"
+      ]
+    }
+  },
+  "media/iconfont/material-icons-outlined.woff": "/packs/media/iconfont/material-icons-outlined-f882956f.woff",
+  "media/iconfont/material-icons-outlined.woff2": "/packs/media/iconfont/material-icons-outlined-6f420cf1.woff2",
+  "media/iconfont/material-icons-round.woff": "/packs/media/iconfont/material-icons-round-5d681e2e.woff",
+  "media/iconfont/material-icons-round.woff2": "/packs/media/iconfont/material-icons-round-c380809f.woff2",
+  "media/iconfont/material-icons-sharp.woff": "/packs/media/iconfont/material-icons-sharp-3a4004a4.woff",
+  "media/iconfont/material-icons-sharp.woff2": "/packs/media/iconfont/material-icons-sharp-219aa914.woff2",
+  "media/iconfont/material-icons-two-tone.woff": "/packs/media/iconfont/material-icons-two-tone-3baa5b8f.woff",
+  "media/iconfont/material-icons-two-tone.woff2": "/packs/media/iconfont/material-icons-two-tone-4ef4218c.woff2",
+  "media/iconfont/material-icons.woff": "/packs/media/iconfont/material-icons-4d73cb90.woff",
+  "media/iconfont/material-icons.woff2": "/packs/media/iconfont/material-icons-0c35d18b.woff2",
+  "media/images/10.png": "/packs/media/images/10-adef484da1695b9ba6c60c8793ac2063.png",
+  "media/images/anh-meo-cute.png": "/packs/media/images/anh-meo-cute-e4039c532776cb56a8c31f3bb01fc2e4.png",
+  "media/images/avatar-meo.png": "/packs/media/images/avatar-meo-d23a43ea11263c5d14e919e5096b5360.png",
+  "media/images/avatar.png": "/packs/media/images/avatar-63f6526ce14c34e53a09185cdf4e15d4.png",
+  "media/images/battery-full-outline.svg": "/packs/media/images/battery-full-outline-600dfd146907e5d26d2bea14f2f386ca.svg",
+  "media/images/boy-with-rocket-light.png": "/packs/media/images/boy-with-rocket-light-ccd6c3afb2ee2240c13a3c4740dc61ed.png",
+  "media/images/delete-icon.svg": "/packs/media/images/delete-icon-df6b4dd989db48e6b3fb1a743d686db1.svg",
+  "media/images/edit-icon.svg": "/packs/media/images/edit-icon-44c803137d1c67a408ec1f879e200a15.svg",
+  "media/images/eye-off-outline.svg": "/packs/media/images/eye-off-outline-7f46144e6b3831f537ac926cbee99de5.svg",
+  "media/images/girl-with-laptop-light.png": "/packs/media/images/girl-with-laptop-light-43382735879bac8d8c034904daa50d68.png",
+  "media/images/logopeacetree.png": "/packs/media/images/logopeacetree-88ea0e95e31bda686cadfd75cdbcf93e.png",
+  "media/images/minus.svg": "/packs/media/images/minus-a35bb3bad890907e3b5282be7f995a96.svg",
+  "media/images/plus-icon.svg": "/packs/media/images/plus-icon-aa520d3556678654fd0a22bb967a2934.svg",
+  "media/images/show-icon.svg": "/packs/media/images/show-icon-1a558958433213fdfb76cf539324ce39.svg",
+  "media/images/tabler-dark.svg": "/packs/media/images/tabler-dark-2802f33821ba436ca0216bcf1ebb89cc.svg",
+  "media/images/tabler-light.svg": "/packs/media/images/tabler-light-a5f7285f4049214fc40b1a876ad966cf.svg"
+}

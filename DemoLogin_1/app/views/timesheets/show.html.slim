@@ -1,0 +1,22 @@
+.container-sm
+  h1
+    | Timesheet 
+    =@timesheet.id
+  p
+    strong
+      | User Id: 
+    = @timesheet.user_id
+    br
+    strong
+      | Day :
+    = format_date_normal(@timesheet.day)
+    br
+    strong
+      | Check in:
+    = format_time_24h(@timesheet.check_out)
+    br
+    strong
+      | Check out:
+    = format_time_24h(@timesheet.check_out)
+    br
+  =link_to "Back to list", timesheets_path,class:'btn btn-outline-success'

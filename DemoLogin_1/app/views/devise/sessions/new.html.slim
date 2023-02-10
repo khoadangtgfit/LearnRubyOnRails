@@ -1,0 +1,20 @@
+.container-sm
+  h2
+    | Log in
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .form-group
+      = f.label "Username Or Email", style:"display:block"
+    br
+    = f.text_field :login, autofocus: true, class:"form-control"
+    .form-group
+      = f.label :password, style:"display:block"
+    br
+    = f.password_field :password, autocomplete: "current-password",class:"form-control"
+    - if devise_mapping.rememberable?
+      .form-group
+        = f.check_box :remember_me
+        = f.label :remember_me
+    .actions
+      = f.submit "Log in",class:"btn btn-primary"
+      = render "devise/shared/links"

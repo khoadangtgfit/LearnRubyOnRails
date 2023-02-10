@@ -1,0 +1,16 @@
+<div class="container-sm">
+<h1>New Time Sheet</h1>
+ <% if @timesheet.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@timesheet.errors.count, "error") %></h2>
+      <ul>
+        <% @timesheet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= render 'form',timesheet: @timesheet, url: timesheets_path, method: :put%>
+
+
+</div>

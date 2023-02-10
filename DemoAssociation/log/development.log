@@ -1,0 +1,182 @@
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrders (20221218094504)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221218094504"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProducts (20221218094521)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221218094521"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateOrderdetails (20221218094656)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "orderdetails" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "order_id" integer, "product_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orderdetails_on_order_id" ON "orderdetails" ("order_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_orderdetails_on_product_id" ON "orderdetails" ("product_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221218094656"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-12-18 10:01:00.810552"], ["updated_at", "2022-12-18 10:01:00.810552"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStudents (20221218100929)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221218100929"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTutors (20221218101002)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "tutors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221218101002"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateKlasses (20221218101044)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "klasses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar, "student_id" integer NOT NULL, "tutor_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_d7f21d17b8"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+, CONSTRAINT "fk_rails_f605add0b7"
+FOREIGN KEY ("tutor_id")
+  REFERENCES "tutors" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_klasses_on_student_id" ON "klasses" ("student_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_klasses_on_tutor_id" ON "klasses" ("tutor_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221218101044"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bart Simpson"], ["created_at", "2022-12-18 10:14:38.631877"], ["updated_at", "2022-12-18 10:14:38.631877"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTutor Create (0.6ms)[0m  [1m[32mINSERT INTO "tutors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mrs Krabapple"], ["created_at", "2022-12-18 10:15:25.959192"], ["updated_at", "2022-12-18 10:15:25.959192"]]
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mKlass Create (0.6ms)[0m  [1m[32mINSERT INTO "klasses" ("subject", "student_id", "tutor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["subject", "Maths"], ["student_id", 1], ["tutor_id", 1], ["created_at", "2022-12-18 10:18:17.126464"], ["updated_at", "2022-12-18 10:18:17.126464"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."name" = ? LIMIT ?[0m  [["name", "Bart Simpson"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.2ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" INNER JOIN "klasses" ON "tutors"."id" = "klasses"."tutor_id" WHERE "klasses"."student_id" = ?[0m  [["student_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mKlass Create (1.4ms)[0m  [1m[32mINSERT INTO "klasses" ("subject", "student_id", "tutor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["subject", "Physics"], ["student_id", 1], ["tutor_id", 1], ["created_at", "2022-12-18 10:21:40.273504"], ["updated_at", "2022-12-18 10:21:40.273504"]]
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mKlass Load (2.6ms)[0m  [1m[34mSELECT "klasses".* FROM "klasses" WHERE "klasses"."name" = ? LIMIT ?[0m  [["name", "Bart Simpson"], ["LIMIT", 1]]
+  [1m[36mKlass Load (1.9ms)[0m  [1m[34mSELECT "klasses".* FROM "klasses" WHERE "klasses"."name" = ? LIMIT ?[0m  [["name", "Bart simpson"], ["LIMIT", 1]]
+  [1m[36mKlass Load (1.6ms)[0m  [1m[34mSELECT "klasses".* FROM "klasses" WHERE "klasses"."name" = ? LIMIT ?[0m  [["name", "Bart Simpson"], ["LIMIT", 1]]
+  [1m[36mKlass Load (0.3ms)[0m  [1m[34mSELECT "klasses".* FROM "klasses" WHERE "klasses"."subject" = ? LIMIT ?[0m  [["subject", "Maths"], ["LIMIT", 1]]
+  [1m[36mKlass Load (0.4ms)[0m  [1m[34mSELECT "klasses".* FROM "klasses" WHERE "klasses"."subject" = ? LIMIT ?[0m  [["subject", "Maths"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTutor Create (0.8ms)[0m  [1m[32mINSERT INTO "tutors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "khoa"], ["created_at", "2022-12-18 10:35:18.110378"], ["updated_at", "2022-12-18 10:35:18.110378"]]
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mKlass Create (1.2ms)[0m  [1m[32mINSERT INTO "klasses" ("subject", "student_id", "tutor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["subject", "van"], ["student_id", 1], ["tutor_id", 1], ["created_at", "2022-12-18 10:36:49.716753"], ["updated_at", "2022-12-18 10:36:49.716753"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTutor Load (0.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mKlass Create (1.3ms)[0m  [1m[32mINSERT INTO "klasses" ("subject", "student_id", "tutor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["subject", "Maths"], ["student_id", 1], ["tutor_id", 1], ["created_at", "2022-12-18 10:37:39.253828"], ["updated_at", "2022-12-18 10:37:39.253828"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mKlass Load (0.5ms)[0m  [1m[34mSELECT "klasses".* FROM "klasses"[0m
+  [1m[36mKlass Load (1.8ms)[0m  [1m[34mSELECT "klasses".* FROM "klasses" WHERE "klasses"."name" = ? LIMIT ?[0m  [["name", "Maths"], ["LIMIT", 1]]
+  [1m[36mKlass Load (0.4ms)[0m  [1m[34mSELECT "klasses".* FROM "klasses" WHERE "klasses"."subject" = ? LIMIT ?[0m  [["subject", "Maths"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mKlass Create (1.2ms)[0m  [1m[32mINSERT INTO "klasses" ("subject", "student_id", "tutor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["subject", "van"], ["student_id", 1], ["tutor_id", 1], ["created_at", "2022-12-18 10:43:45.882963"], ["updated_at", "2022-12-18 10:43:45.882963"]]
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mKlass Create (1.2ms)[0m  [1m[32mINSERT INTO "klasses" ("subject", "student_id", "tutor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["subject", "Physics"], ["student_id", 1], ["tutor_id", 1], ["created_at", "2022-12-18 10:43:58.055076"], ["updated_at", "2022-12-18 10:43:58.055076"]]
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTutor Create (1.0ms)[0m  [1m[32mINSERT INTO "tutors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "hello"], ["created_at", "2022-12-18 10:45:57.533034"], ["updated_at", "2022-12-18 10:45:57.533034"]]
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mKlass Load (1.4ms)[0m  [1m[34mSELECT "klasses".* FROM "klasses" WHERE "klasses"."name" = ? LIMIT ?[0m  [["name", "Bart Simpson"], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."name" = ? LIMIT ?[0m  [["name", "Bart Simpson"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.1ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" INNER JOIN "klasses" ON "tutors"."id" = "klasses"."tutor_id" WHERE "klasses"."student_id" = ?[0m  [["student_id", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."name" = ? LIMIT ?[0m  [["name", "Bart Simpson"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.2ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" INNER JOIN "klasses" ON "tutors"."id" = "klasses"."tutor_id" WHERE "klasses"."student_id" = ?[0m  [["student_id", 1]]
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."name" = ? LIMIT ?[0m  [["name", "Bart Simpson"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" INNER JOIN "klasses" ON "tutors"."id" = "klasses"."tutor_id" WHERE "klasses"."student_id" = ?[0m  [["student_id", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (1.1ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "long"], ["created_at", "2022-12-18 10:48:43.124293"], ["updated_at", "2022-12-18 10:48:43.124293"]]
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."name" = ? LIMIT ?[0m  [["name", "long"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" INNER JOIN "klasses" ON "tutors"."id" = "klasses"."tutor_id" WHERE "klasses"."student_id" = ?[0m  [["student_id", 2]]
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."name" = ? LIMIT ?[0m  [["name", "long"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.6ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "edna"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "khoa"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mKlass Create (1.4ms)[0m  [1m[32mINSERT INTO "klasses" ("subject", "student_id", "tutor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["subject", "Maths"], ["student_id", 2], ["tutor_id", 2], ["created_at", "2022-12-18 10:53:13.184911"], ["updated_at", "2022-12-18 10:53:13.184911"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."name" = ? LIMIT ?[0m  [["name", "long"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" INNER JOIN "klasses" ON "tutors"."id" = "klasses"."tutor_id" WHERE "klasses"."student_id" = ?[0m  [["student_id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mKlass Create (1.3ms)[0m  [1m[32mINSERT INTO "klasses" ("subject", "student_id", "tutor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["subject", "hello1"], ["student_id", 2], ["tutor_id", 2], ["created_at", "2022-12-18 10:55:03.160200"], ["updated_at", "2022-12-18 10:55:03.160200"]]
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "hello"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mKlass Create (1.2ms)[0m  [1m[32mINSERT INTO "klasses" ("subject", "student_id", "tutor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["subject", "hello1"], ["student_id", 2], ["tutor_id", 3], ["created_at", "2022-12-18 10:55:53.830833"], ["updated_at", "2022-12-18 10:55:53.830833"]]
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."name" = ? LIMIT ?[0m  [["name", "long"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" INNER JOIN "klasses" ON "tutors"."id" = "klasses"."tutor_id" WHERE "klasses"."student_id" = ?[0m  [["student_id", 2]]
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "khoa"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "khoa"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "khoa"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "khoa"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "khoa"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mTutor Load (0.6ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."name" = ? LIMIT ?[0m  [["name", "long"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "hello"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mKlass Create (1.9ms)[0m  [1m[32mINSERT INTO "klasses" ("subject", "student_id", "tutor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["subject", "Maths"], ["student_id", 2], ["tutor_id", 3], ["created_at", "2022-12-18 11:08:54.628181"], ["updated_at", "2022-12-18 11:08:54.628181"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTutor Load (1.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE (hello) LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "hello"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mKlass Create (0.8ms)[0m  [1m[32mINSERT INTO "klasses" ("subject", "student_id", "tutor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["subject", "dso"], ["student_id", 2], ["tutor_id", 3], ["created_at", "2022-12-18 11:11:42.083772"], ["updated_at", "2022-12-18 11:11:42.083772"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "hello"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "hello"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "hello"], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."name" = ? LIMIT ?[0m  [["name", "hello"], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrders (20221218114135)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrders (20221218114135)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

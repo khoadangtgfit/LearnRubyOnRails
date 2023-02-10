@@ -1,0 +1,12 @@
+h1
+  | Sign in
+=form_with url:sign_in_path do |form|
+  .mb-3
+    =form.label :email, style:"display:inline"
+    =form.text_field :email, class:"form-control", placeholder:"steve@gmail.com"
+  .mb-3
+    =form.label :password, style:"display:inline"
+    =form.password_field :password, class:"form-control", placeholder:"password"
+    =link_to "Forgot your password?", password_resets_edit_path
+  .mb-3
+    =form.submit "sign in", class:"btn btn-primary"

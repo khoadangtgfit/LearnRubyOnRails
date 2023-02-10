@@ -1,0 +1,646 @@
+Started GET "/" for 127.0.0.1 at 2022-12-21 08:29:56 +0700
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.6ms | Allocations: 575)
+Completed 200 OK in 40ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 4373)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20221221015858)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221221015858"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-12-21 02:01:00.993438"], ["updated_at", "2022-12-21 02:01:00.993438"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-12-21 09:03:14 +0700
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x00007f6954059fa0 @set=#<ActionDispatch::Routing::RouteSet:0x00007f6955d5bc48>, @draw_paths=[#<Pathname:/home/johnny/Documents/Rails/photo-app/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x00007f6954059f50 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x00007f6955674128 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>
+
+  devise_for :users
+  ^^^^^^^^^^):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2022-12-21 09:03:32 +0700
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x00007f6954053970 @set=#<ActionDispatch::Routing::RouteSet:0x00007f6955d5bc48>, @draw_paths=[#<Pathname:/home/johnny/Documents/Rails/photo-app/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x00007f69540538f8 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x00007f6955674128 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>
+
+  devise_for :users
+  ^^^^^^^^^^):
+  
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2022-12-21 09:05:30 +0700
+  
+SyntaxError (/home/johnny/Documents/Rails/photo-app/config/routes.rb:3: syntax error, unexpected ':', expecting `end'
+  devise_for: users
+            ^
+):
+  
+config/routes.rb:3: syntax error, unexpected ':', expecting `end'
+config/routes.rb:3: syntax error, unexpected ':', expecting `end'
+config/routes.rb:3: syntax error, unexpected ':', expecting `end'
+Started GET "/welcome" for ::1 at 2022-12-21 09:06:29 +0700
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x00007f6927189d30 @set=#<ActionDispatch::Routing::RouteSet:0x00007f6955d5bc48>, @draw_paths=[#<Pathname:/home/johnny/Documents/Rails/photo-app/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x00007f6927189ce0 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x00007f6955674128 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>
+
+  devise_for :users
+  ^^^^^^^^^^):
+  
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/welcome" for ::1 at 2022-12-21 09:07:10 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/welcome"):
+  
+Started GET "/welcome/index" for ::1 at 2022-12-21 09:07:19 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/welcome/index"):
+  
+Started GET "/" for ::1 at 2022-12-21 09:07:24 +0700
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 4551)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 6898)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap.
+        on line 16:1 of app/assets/stylesheets/application.scss
+>> @import 'bootstrap';
+
+   ^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2022-12-21 09:07:51 +0700
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 12820)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms | Allocations: 13168)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/johnny/Documents/Rails/photo-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-12-21 12:16:00 +0700
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 339)
+  Rendered layout layouts/application.html.erb (Duration: 1718.2ms | Allocations: 15348)
+Completed 200 OK in 1735ms (Views: 1723.0ms | ActiveRecord: 0.0ms | Allocations: 18604)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-21 12:16:17 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 799)
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 30.6ms | Allocations: 7873)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 9806)
+Completed 200 OK in 64ms (Views: 41.6ms | ActiveRecord: 0.6ms | Allocations: 18973)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-21 12:24:15 +0700
+  
+NoMethodError (undefined method `protec_from_forgery' for ApplicationController:Class
+
+  protec_from_forgery with: :exception
+  ^^^^^^^^^^^^^^^^^^^
+Did you mean?  protect_from_forgery):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+Started GET "/users/sign_in" for ::1 at 2022-12-21 12:24:31 +0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 269)
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1702)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 3638)
+Completed 200 OK in 22ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 11247)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-12-21 12:29:14 +0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 761)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 4454)
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 11285)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 1.1ms | Allocations: 20651)
+
+
+  
+ActionView::Template::Error (couldn't find file 'twitter-bootstrap-static/bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/johnny/Documents/Rails/photo-app/app/assets/config
+  /home/johnny/Documents/Rails/photo-app/app/assets/images
+  /home/johnny/Documents/Rails/photo-app/app/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actioncable-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/activestorage-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actionview-6.1.7/lib/assets/compiled
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/johnny/Documents/Rails/photo-app/node_modules
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/popper_js-2.11.6/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "PhotoApp" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/stylesheets/bootstrap_and_overrides.css:2
+app/views/layouts/application.html.erb:10
+Started GET "/users/sign_in" for ::1 at 2022-12-21 12:30:17 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 266)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 8179)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 8847)
+
+
+  
+ActionView::Template::Error (couldn't find file 'devise_bootstrap_views' with type 'text/css'
+Checked in these paths: 
+  /home/johnny/Documents/Rails/photo-app/app/assets/config
+  /home/johnny/Documents/Rails/photo-app/app/assets/images
+  /home/johnny/Documents/Rails/photo-app/app/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actioncable-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/activestorage-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actionview-6.1.7/lib/assets/compiled
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/johnny/Documents/Rails/photo-app/node_modules
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/popper_js-2.11.6/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "PhotoApp" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/stylesheets/application.scss:13
+app/views/layouts/application.html.erb:10
+Started GET "/users/sign_in" for ::1 at 2022-12-21 12:30:25 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 266)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 7305)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 7864)
+
+
+  
+ActionView::Template::Error (couldn't find file 'devise_bootstrap_views' with type 'text/css'
+Checked in these paths: 
+  /home/johnny/Documents/Rails/photo-app/app/assets/config
+  /home/johnny/Documents/Rails/photo-app/app/assets/images
+  /home/johnny/Documents/Rails/photo-app/app/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actioncable-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/activestorage-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actionview-6.1.7/lib/assets/compiled
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/johnny/Documents/Rails/photo-app/node_modules
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/popper_js-2.11.6/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "PhotoApp" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/stylesheets/application.scss:13
+app/views/layouts/application.html.erb:10
+Started GET "/users/sign_in" for ::1 at 2022-12-21 12:32:40 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 266)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5417)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 5991)
+
+
+  
+ActionView::Template::Error (couldn't find file 'twitter-bootstrap-static/bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/johnny/Documents/Rails/photo-app/app/assets/config
+  /home/johnny/Documents/Rails/photo-app/app/assets/images
+  /home/johnny/Documents/Rails/photo-app/app/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actioncable-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/activestorage-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actionview-6.1.7/lib/assets/compiled
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/johnny/Documents/Rails/photo-app/node_modules
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/popper_js-2.11.6/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "PhotoApp" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/stylesheets/bootstrap_and_overrides.css:2
+app/views/layouts/application.html.erb:10
+Started GET "/users/sign_in" for ::1 at 2022-12-21 12:34:40 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 266)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 6790)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 7362)
+
+
+  
+ActionView::Template::Error (couldn't find file 'devise_bootstrap_views' with type 'text/css'
+Checked in these paths: 
+  /home/johnny/Documents/Rails/photo-app/app/assets/config
+  /home/johnny/Documents/Rails/photo-app/app/assets/images
+  /home/johnny/Documents/Rails/photo-app/app/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actioncable-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/activestorage-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actionview-6.1.7/lib/assets/compiled
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/johnny/Documents/Rails/photo-app/node_modules
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/popper_js-2.11.6/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "PhotoApp" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/stylesheets/application.css:5
+app/views/layouts/application.html.erb:10
+Started GET "/users/sign_up" for ::1 at 2022-12-21 12:35:31 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 29.0ms | Allocations: 5201)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 5283)
+Completed 500 Internal Server Error in 33ms (Allocations: 6770)
+
+
+  
+ActionView::Template::Error (undefined method `bootstrap_devise_error_messages!' for #<ActionView::Base:0x0000000000ee20>):
+    1: <h1><%= t('.sign_up') %></h1>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    4:   <%= bootstrap_devise_error_messages! %>
+    5: 
+    6:   <div class="form-group">
+    7:     <%= f.label :email %>
+  
+app/views/devise/registrations/new.html.erb:4
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2022-12-21 12:37:37 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 29.7ms | Allocations: 4687)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 4763)
+Completed 500 Internal Server Error in 31ms (Allocations: 5349)
+
+
+  
+ActionView::Template::Error (undefined method `bootstrap_devise_error_messages!' for #<ActionView::Base:0x0000000000f168>):
+    1: <h1><%= t('.sign_up') %></h1>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    4:   <%= bootstrap_devise_error_messages! %>
+    5: 
+    6:   <div class="form-group">
+    7:     <%= f.label :email %>
+  
+app/views/devise/registrations/new.html.erb:4
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2022-12-21 12:37:39 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 25.6ms | Allocations: 4687)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 4763)
+Completed 500 Internal Server Error in 27ms (Allocations: 5258)
+
+
+  
+ActionView::Template::Error (undefined method `bootstrap_devise_error_messages!' for #<ActionView::Base:0x0000000000f438>):
+    1: <h1><%= t('.sign_up') %></h1>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    4:   <%= bootstrap_devise_error_messages! %>
+    5: 
+    6:   <div class="form-group">
+    7:     <%= f.label :email %>
+  
+app/views/devise/registrations/new.html.erb:4
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2022-12-21 12:41:14 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.1ms | Allocations: 4687)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 4763)
+Completed 500 Internal Server Error in 20ms (Allocations: 5258)
+
+
+  
+ActionView::Template::Error (undefined method `bootstrap_devise_error_messages!' for #<ActionView::Base:0x0000000000f758>):
+    1: <h1><%= t('.sign_up') %></h1>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    4:   <%= bootstrap_devise_error_messages! %>
+    5: 
+    6:   <div class="form-group">
+    7:     <%= f.label :email %>
+  
+app/views/devise/registrations/new.html.erb:4
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2022-12-21 12:43:01 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 28.8ms | Allocations: 4687)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 4763)
+Completed 500 Internal Server Error in 31ms (Allocations: 5258)
+
+
+  
+ActionView::Template::Error (undefined method `bootstrap_devise_error_messages!' for #<ActionView::Base:0x0000000000fa78>):
+    1: <h1><%= t('.sign_up') %></h1>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    4:   <%= bootstrap_devise_error_messages! %>
+    5: 
+    6:   <div class="form-group">
+    7:     <%= f.label :email %>
+  
+app/views/devise/registrations/new.html.erb:4
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2022-12-21 12:43:23 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.1ms | Allocations: 4687)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 4763)
+Completed 500 Internal Server Error in 25ms (Allocations: 5258)
+
+
+  
+ActionView::Template::Error (undefined method `bootstrap_devise_error_messages!' for #<ActionView::Base:0x0000000000fd70>):
+    1: <h1><%= t('.sign_up') %></h1>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    4:   <%= bootstrap_devise_error_messages! %>
+    5: 
+    6:   <div class="form-group">
+    7:     <%= f.label :email %>
+  
+app/views/devise/registrations/new.html.erb:4
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_in" for ::1 at 2022-12-21 12:43:28 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 267)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1487)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 6983)
+Completed 500 Internal Server Error in 15ms (Allocations: 7552)
+
+
+  
+ActionView::Template::Error (couldn't find file 'devise_bootstrap_views' with type 'text/css'
+Checked in these paths: 
+  /home/johnny/Documents/Rails/photo-app/app/assets/config
+  /home/johnny/Documents/Rails/photo-app/app/assets/images
+  /home/johnny/Documents/Rails/photo-app/app/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actioncable-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/activestorage-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actionview-6.1.7/lib/assets/compiled
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/johnny/Documents/Rails/photo-app/node_modules
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/popper_js-2.11.6/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "PhotoApp" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/stylesheets/application.css:5
+app/views/layouts/application.html.erb:10
+Started GET "/users/sign_in" for ::1 at 2022-12-21 12:55:35 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 266)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 6745)
+Completed 500 Internal Server Error in 14ms (Allocations: 7302)
+
+
+  
+ActionView::Template::Error (couldn't find file 'devise_bootstrap_views' with type 'text/css'
+Checked in these paths: 
+  /home/johnny/Documents/Rails/photo-app/app/assets/config
+  /home/johnny/Documents/Rails/photo-app/app/assets/images
+  /home/johnny/Documents/Rails/photo-app/app/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actioncable-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/activestorage-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actionview-6.1.7/lib/assets/compiled
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/johnny/Documents/Rails/photo-app/node_modules
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/popper_js-2.11.6/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "PhotoApp" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/stylesheets/application.css:5
+app/views/layouts/application.html.erb:10
+Started GET "/users/sign_in" for ::1 at 2022-12-21 12:56:17 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 266)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5424)
+Completed 500 Internal Server Error in 12ms (Allocations: 5980)
+
+
+  
+ActionView::Template::Error (couldn't find file 'twitter-bootstrap-static/bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/johnny/Documents/Rails/photo-app/app/assets/config
+  /home/johnny/Documents/Rails/photo-app/app/assets/images
+  /home/johnny/Documents/Rails/photo-app/app/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actioncable-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/activestorage-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actionview-6.1.7/lib/assets/compiled
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/johnny/Documents/Rails/photo-app/node_modules
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/popper_js-2.11.6/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "PhotoApp" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/stylesheets/bootstrap_and_overrides.css:2
+app/views/layouts/application.html.erb:10
+Started GET "/users/sign_in" for ::1 at 2022-12-21 12:56:31 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 266)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 7645)
+Completed 500 Internal Server Error in 23ms (Allocations: 8201)
+
+
+  
+ActionView::Template::Error (couldn't find file 'twitter-bootstrap-static/sprites' with type 'text/css'
+Checked in these paths: 
+  /home/johnny/Documents/Rails/photo-app/app/assets/config
+  /home/johnny/Documents/Rails/photo-app/app/assets/images
+  /home/johnny/Documents/Rails/photo-app/app/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actioncable-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/activestorage-6.1.7/app/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/actionview-6.1.7/lib/assets/compiled
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/johnny/Documents/Rails/photo-app/node_modules
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/popper_js-2.11.6/assets/javascripts
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/stylesheets
+  /home/johnny/.rvm/gems/ruby-3.1.2/gems/bootstrap-5.2.3/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "PhotoApp" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/stylesheets/bootstrap_and_overrides.css:4
+app/views/layouts/application.html.erb:10
+Started GET "/users/sign_in" for ::1 at 2022-12-21 12:56:40 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 266)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 489.5ms | Allocations: 15521)
+Completed 500 Internal Server Error in 491ms (Allocations: 16079)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+    14:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:14
+Started GET "/users/sign_in" for ::1 at 2022-12-21 13:04:17 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 266)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 6778)
+Completed 500 Internal Server Error in 11ms (Allocations: 7334)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+    14:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:14

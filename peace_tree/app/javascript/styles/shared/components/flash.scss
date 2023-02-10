@@ -1,0 +1,10 @@
+.flash-container {
+  position: absolute;
+  z-index: 9999;
+  left: 40%;
+  top: 0;
+  width: 300px;
+  .alert {
+    min-width: 360px;
+  }
+}

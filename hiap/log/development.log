@@ -1,0 +1,74 @@
+Started GET "/" for 127.0.0.1 at 2022-11-25 21:51:39 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.3ms | Allocations: 635)
+Completed 200 OK in 20ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 5098)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-25 22:12:19 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 527)
+Completed 200 OK in 12ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 3756)
+
+
+Started GET "/" for ::1 at 2022-11-25 22:12:35 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-3.1.2/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.0ms | Allocations: 297)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1018)
+
+
+Started GET "/welcome" for ::1 at 2022-11-25 22:21:22 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/welcome"):
+  
+Started GET "/welcome" for ::1 at 2022-11-25 22:22:37 +0700
+Processing by PagesController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/welcome.html.erb within layouts/application
+  Rendered pages/welcome.html.erb within layouts/application (Duration: 0.7ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 265.2ms | Allocations: 91091)
+Completed 200 OK in 268ms (Views: 266.9ms | Allocations: 92075)
+
+
+Started GET "/contact" for ::1 at 2022-11-25 22:23:11 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/contact"):
+  
+Started GET "/contact" for ::1 at 2022-11-25 22:25:07 +0700
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.5ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 14449)
+Completed 200 OK in 29ms (Views: 28.1ms | Allocations: 15405)
+
+
+Started GET "/contact" for ::1 at 2022-11-25 22:27:33 +0700
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.5ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 14411)
+Completed 200 OK in 16ms (Views: 15.4ms | Allocations: 15369)
+
+
+Started GET "/contact" for ::1 at 2022-11-25 22:29:13 +0700
+Processing by PagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.1ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 14057)
+Completed 200 OK in 14ms (Views: 13.0ms | Allocations: 14689)
+
+
+Started GET "/" for ::1 at 2022-11-25 22:29:16 +0700
+Processing by PagesController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/welcome.html.erb within layouts/application
+  Rendered pages/welcome.html.erb within layouts/application (Duration: 0.8ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2502)
+Completed 200 OK in 9ms (Views: 7.9ms | Allocations: 2854)
+
+

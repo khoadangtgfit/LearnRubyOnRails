@@ -1,0 +1,2 @@
+class Helu < ApplicationRecord
+end

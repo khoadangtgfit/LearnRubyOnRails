@@ -1,0 +1,55 @@
+Started GET "/" for 127.0.0.1 at 2022-11-22 15:24:05 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-2.7.6/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-2.7.6/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.1ms | Allocations: 665)
+Completed 200 OK in 28ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 6487)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-22 15:25:08 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-2.7.6/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-2.7.6/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 350)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 1097)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-22 15:25:27 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-2.7.6/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-2.7.6/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.0ms | Allocations: 559)
+Completed 200 OK in 11ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 5195)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 14:20:57 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-2.7.6/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-2.7.6/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.4ms | Allocations: 559)
+Completed 200 OK in 39ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 5196)
+
+
+Started GET "/users" for ::1 at 2022-11-23 21:16:49 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/" for ::1 at 2022-11-23 21:17:21 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johnny/.rvm/gems/ruby-2.7.6/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johnny/.rvm/gems/ruby-2.7.6/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 349)
+Completed 200 OK in 5ms (Views: 3.5ms | Allocations: 1047)
+
+
+Started GET "/user" for ::1 at 2022-11-23 21:17:26 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/users" for ::1 at 2022-11-23 21:17:29 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2022-11-23 21:36:33 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/Users" for ::1 at 2022-11-23 21:36:41 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/Users"):
+  
